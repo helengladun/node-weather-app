@@ -13,11 +13,12 @@ const forecast = (latitude, longitude, callback) => {
         temperature,
         feelslike,
         weather_descriptions,
+        humidity
       } = body.current;
 
       callback(
         undefined,
-        `It is currently ${temperature} degress out. It feels like ${feelslike} degress out. It's ${weather_descriptions[0].toLowerCase()} today.`
+        `It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out. It's ${weather_descriptions[0].toLowerCase()} today. The humidity is ${humidity}%.`
       );
     }
   });
